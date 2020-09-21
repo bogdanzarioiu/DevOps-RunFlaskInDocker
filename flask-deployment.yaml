@@ -1,0 +1,6 @@
+version: '3'
+services: 
+    flask-app:
+        image: 011775946409.dkr.ecr.us-east-2.amazonaws.com/flask-app:latest
+        ports: 
+            - 5050:5000
