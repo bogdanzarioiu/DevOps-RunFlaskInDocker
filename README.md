@@ -21,6 +21,8 @@ You can simply double check that the installation was successful by running `doc
 **`1.5 Run the app`**<br/>
 `python3 flask-demo-app.py`<br/>
 Now your app should be accessible through `localhost:8080` as you can see below:
+![image](https://user-images.githubusercontent.com/24807183/93783858-85b1bd00-fc2c-11ea-8859-83ffc76de205.png)
+
 
 # Part 2 - automation :)
 We use a `Dockerfile` that will allow us to build an image for our Flask demo app. All we have to do after this is to run a new container with the new image and test if the deployment was successful.<br/>
