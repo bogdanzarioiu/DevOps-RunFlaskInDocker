@@ -36,5 +36,16 @@ After all this, we should be able to access the same app but by using the port 5
 ![image](https://user-images.githubusercontent.com/24807183/93783972-ab3ec680-fc2c-11ea-9cbc-c9b3278110d4.png)
 
 
+# Extra part
+**`We can go one step further!`**<br/>
+In order to use a Docker image in a production app, you need to push/publish it to a repository/registry. Docker has a registry platform where you can push your images called `Docker Hub` but it's public, meaning that anyone can pull your image and run a container with it. For learning purposes this is totally fine but for production images sure it's not recommended.<br/>
+I created a private repository in AWS by using ECR(Elastic Container Registry) service and pushed our image created from the Dockerfile on it.<br/>
+It's very easy to create a private repository, just keep in mind that one repo stores only versions of the same image and not different images.<br/>
+After you create it, you need to check `View Push Commands`. This will tell you exactly what you need to to in order t be able to push an image to a repo.You need to have AWS CLI installed already - info here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html <br/> <br/>
+At this point we have our flask image in a private repo on AWS. We can use a `docker-compose` deployment file to automate this process even more(check **flask-deployment.yaml**)<br/>
+We simply run `docker-compose -f flask-deployment.yaml up`. This will pull the image from the repository and spin a container:
+To verify, we can access once again our application on port 5050 this time(that's the port we specified in the deployment file):
+
+
 
 
