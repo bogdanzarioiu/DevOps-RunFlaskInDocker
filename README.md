@@ -46,7 +46,9 @@ At this point we have our flask image in a private repo on AWS. We can use a `do
 We simply run `docker-compose -f flask-deployment.yaml up`. This will pull the image from the repository and spin a container:<br/> <br/>
 ![image](https://user-images.githubusercontent.com/24807183/93790084-eba14300-fc32-11ea-9a54-6ae6ab549dc1.png)
 
-To verify, we can access once again our application on port 5050 this time(that's the port we specified in the deployment file):
+To verify, we can access once again our application on port 5050 this time(that's the port we specified in the deployment file):<br/> <br/>
+![image](https://user-images.githubusercontent.com/24807183/93790330-34f19280-fc33-11ea-93ba-f66692d2ac73.png)
+
 
 
 
