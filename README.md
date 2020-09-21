@@ -20,7 +20,7 @@ You can simply double check that the installation was successful by running `doc
 `apt-get install nano -y` *Here I used nano to copy a demo Flask app(**flask-demo-app.py**) from my mac to the container.*<br/>
 **`1.5 Run the app`**<br/>
 `python3 flask-demo-app.py`<br/>
-Now your app should be accessible through `localhost:8080` as you can see below:<br/>
+Now your app should be accessible through `localhost:8080` as you can see below:<br/> <br/>
 ![image](https://user-images.githubusercontent.com/24807183/93783858-85b1bd00-fc2c-11ea-8859-83ffc76de205.png)
 
 
@@ -32,7 +32,7 @@ We use a `Dockerfile` that will allow us to build an image for our Flask demo ap
 **`2.2 Final test`**<br/>
 Now we need to test that we can deploy a container from the image we just built:<br/>
 `docker run -it -d --name flask-DEMO -p 5000:5000 099ca57ce8d7` *099ca57ce8d7 is the image ID for the one we just created - you can get it by running `docker images`*<br/>
-After all this, we should be able to access the same app but by using the port 5000:<br/>
+After all this, we should be able to access the same app but by using the port 5000:<br/> <br/>
 ![image](https://user-images.githubusercontent.com/24807183/93783972-ab3ec680-fc2c-11ea-9cbc-c9b3278110d4.png)
 
 
